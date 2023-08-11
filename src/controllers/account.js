@@ -9,7 +9,7 @@ export async function createUser(req, res) {
     res.send(data);
   } catch (error) {
     if (error instanceof Error) res.send(error.message);
-    res.status(500).send(error);
+    else res.status(500).send(error);
   }
 }
 export async function signIn(req, res) {
@@ -23,6 +23,6 @@ export async function signIn(req, res) {
     res.send(user);
   } catch (error) {
     if (error instanceof Error) res.send(error.message);
-    res.status(500).send(error);
+    else res.status(500).send(error);
   }
 }
